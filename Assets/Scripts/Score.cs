@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 
 	static int catchCount;
-	static TextMesh textScore;
 	static int CatchCount
 	{
 		get
@@ -35,19 +35,18 @@ public class Score : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		textScore = GetComponent<TextMesh>();
 	}
 
 	public static void UpdateScore() 
 	{
 		CatchCount++;
-		textScore.text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
+		GameObject.Find("Text").GetComponent<Text>().text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 
 	public static void UpdateCoinsScore()
 	{
 		CoinsCount++;
-		textScore.text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
+		GameObject.Find("Text").GetComponent<Text>().text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 
 	public static void ResetScores()

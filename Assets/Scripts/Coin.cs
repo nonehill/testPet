@@ -6,26 +6,26 @@ public class Coin : MonoBehaviour {
 	Vector3 originalPos;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		originalPos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void OnTriggerEnter2D (Collider2D other) 
 	{
-
-		renderer.enabled = false;
-
-		if(other.CompareTag("Player"))
-			Score.UpdateCoinsScore ();
-	}
-
-	void Update()
-	{
-		if (transform.position.x < Camera.main.transform.position.x - 10) 
+		if (other.CompareTag ("Player"))
 		{
-			renderer.enabled = true;
-			transform.position = new Vector3(transform.position.x + Random.Range(20, 30), Random.Range(-2, 2), 0);
+			Score.UpdateCoinsScore ();
+			GetComponent<Renderer>().enabled = false;
+		}
+
+		if (other.CompareTag ("CoinDestroyer"))
+		{
+			Debug.Log("coin destroyer here");
+			GetComponent<Renderer>().enabled = true;
+			transform.position = new Vector3(transform.position.x + Random.Range(40, 50), Random.Range(-2, 2), 0);
 		}
 	}
+
 }

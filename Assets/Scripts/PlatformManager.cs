@@ -12,7 +12,7 @@ public class PlatformManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (transform.position.x < Camera.main.transform.position.x - 20)
-						transform.position = new Vector3 (transform.position.x + 50, transform.position.y, transform.position.z);
+		if (transform.position.x < Camera.main.transform.position.x - 25)
+			transform.position = new Vector3 (transform.position.x + 52, transform.position.y, transform.position.z);
 	}
 }

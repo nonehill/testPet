@@ -3,8 +3,6 @@ using System.Collections;
 
 public class SpawnPlatforms : MonoBehaviour
 {
-
-
 	public int maxPlatforms = 20;
 	public GameObject platform;
 	public float horizontalMin = 7.5f;
@@ -15,12 +13,14 @@ public class SpawnPlatforms : MonoBehaviour
 	public Vector2 originalPos;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		originalPos = transform.position;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		for (int i = 0; i < maxPlatforms; i++)
 		{
 			Vector2 randomPosition = originalPos + new Vector2(Random.Range(horizontalMin, horizontalMax), Random.Range(verticalMin, verticalMax));
