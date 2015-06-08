@@ -28,6 +28,7 @@ public class SpawnEnemy : MonoBehaviour {
 			GetComponent<Collider2D>().enabled = true;
 			GetComponent<Renderer>().enabled = false;
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
 			if (canUpdateScore)
 			{
 				Score.UpdateScore();

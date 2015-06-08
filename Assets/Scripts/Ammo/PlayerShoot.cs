@@ -4,15 +4,27 @@ using System.Collections;
 public class PlayerShoot : MonoBehaviour {
 
 	public GameObject rocket;
+	public float timeBetweenBullets = 2;
+	float time = 2;
+
+	AmmoManager ammoManager;
+
+	void Awake ()
+	{
+		ammoManager = GameObject.Find("GameManager").GetComponent<AmmoManager> ();
+	}
+
+	void Update ()
+	{
+		time += Time.deltaTime;
+	}
 
 	public void ShootPressed ()
 	{
-
-//		if (AmmoManager.canShootRocket)
-//		{
-			rocket.SetActive (true);
-			rocket.GetComponent<Rigidbody2D>().velocity = new Vector2(40, 0);
-			rocket.GetComponent<Rigidbody2D>().isKinematic = false;
-//		}
+		if (time >= timeBetweenBullets)
+		{
+			time = 0;
+			ammoManager.Shoot();
+		}
 	}
 }

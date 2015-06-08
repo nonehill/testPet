@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ammo\AmmoManager.cs" />
      <Compile Include="Assets\Scripts\Ammo\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\Ammo\GrabbedWeapon.cs" />
      <Compile Include="Assets\Scripts\Ammo\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\Ammo\Rocket.cs" />
      <Compile Include="Assets\Scripts\Ammo\RocketItem.cs" />
