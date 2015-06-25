@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class EnemyDamage : MonoBehaviour {
+
+	public EnemyHealth enemyHealth;
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -22,7 +24,7 @@ public class EnemyDamage : MonoBehaviour {
 				break;
 			}		
 
-			EnemyHealth.HitEnemy(damage);
+			enemyHealth.HitEnemy(damage);
 
 
 			StartCoroutine(EnemyHit());

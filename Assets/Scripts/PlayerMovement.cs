@@ -24,20 +24,23 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update() 
 	{
-		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
-#if UNITY_EDITOR
-		if (Input.GetButtonDown ("Jump") && grounded )
-		{
-			jump = true;
-		}
-#endif
 
-#if !UNITY_EDITOR		
-		if (Input.touchCount > 0 && grounded )
+		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
+//		UNITY_EDITOR
+
+//#if UNITY_WEBPLAYER
+		if (Input.GetButtonDown ("Jump1") && grounded )
 		{
 			jump = true;
 		}
-#endif
+//#endif
+
+//#if !UNITY_EDITOR		
+//		if (Input.touchCount > 0 && grounded )
+//		{
+//			jump = true;
+//		}
+//#endif
 
 		if (transform.position.x < Camera.main.transform.position.x - 10 || transform.position.y < Camera.main.transform.position.y - 10)
 		{

@@ -8,7 +8,6 @@ public class Coin : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		originalPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -16,15 +15,13 @@ public class Coin : MonoBehaviour {
 	{
 		if (other.CompareTag ("Player"))
 		{
-			Score.UpdateCoinsScore ();
-			GetComponent<Renderer>().enabled = false;
+			Score.UpdateCoinsScore(CompareTag("SilverCoin") ? 1 : 3);
+			Destroy(transform.parent.gameObject);
 		}
 
 		if (other.CompareTag ("CoinDestroyer"))
 		{
-			Debug.Log("coin destroyer here");
-			GetComponent<Renderer>().enabled = true;
-			transform.position = new Vector3(transform.position.x + Random.Range(40, 50), Random.Range(-2, 2), 0);
+			Destroy(transform.parent.gameObject);
 		}
 	}
 

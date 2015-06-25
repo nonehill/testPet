@@ -40,13 +40,13 @@ public class Score : MonoBehaviour {
 	public static void UpdateScore() 
 	{
 		CatchCount++;
-		GameObject.Find("Text").GetComponent<Text>().text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
+		GameObject.Find("Text").GetComponent<Text>().text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 
-	public static void UpdateCoinsScore()
+	public static void UpdateCoinsScore (int amount)
 	{
-		CoinsCount++;
-		GameObject.Find("Text").GetComponent<Text>().text = "Saved cats: " + CatchCount + "          Coins: " + CoinsCount;
+		CoinsCount += amount;
+		GameObject.Find("Text").GetComponent<Text>().text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 
 	public static void ResetScores()

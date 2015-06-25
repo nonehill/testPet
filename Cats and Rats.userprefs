@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ammo/GrabbedWeapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/EnemyHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="9" Column="31" />
-      <File FileName="Assets/Scripts/HighGroundManager.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/Ammo/Rocket.cs" Line="14" Column="54" />
-      <File FileName="Assets/Scripts/Ammo/AmmoManager.cs" Line="46" Column="1" />
-      <File FileName="Assets/Scripts/Ammo/GrabbedWeapon.cs" Line="18" Column="46" />
-      <File FileName="Assets/Scripts/Coin.cs" Line="26" Column="17" />
-      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="44" Column="17" />
+      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="34" Column="2" />
+      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="21" Column="32" />
+      <File FileName="Assets/Scripts/Enemy/SpawnEnemy.cs" Line="32" Column="23" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="18" Column="59" />
+      <File FileName="Assets/Scripts/Score.cs" Line="46" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

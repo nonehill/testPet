@@ -11,7 +11,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 
 	GameObject spawnPoint;
-
+	public EnemyHealth enemyHealth;
 
 	// Use this for initialization
 	void Start()
@@ -23,7 +23,7 @@ public class SpawnEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (transform.position.x < Camera.main.transform.position.x - 10 || transform.position.y < Camera.main.transform.position.y - 10 || EnemyHealth.isDead)
+		if (transform.position.x < Camera.main.transform.position.x - 10 || transform.position.y < Camera.main.transform.position.y - 10 || enemyHealth.isDead)
 		{
 			GetComponent<Collider2D>().enabled = true;
 			GetComponent<Renderer>().enabled = false;
@@ -41,7 +41,7 @@ public class SpawnEnemy : MonoBehaviour {
 
 		if (!canUpdateScore && spawnPoint_X == spawner_X) 
 		{			
-			EnemyHealth.NewEnemyHealth(100, 0);
+			enemyHealth.NewEnemyHealth(100, 0);
 			transform.position = new Vector3(spawner.transform.position.x, spawner.transform.position.y, 0);		
 			GetComponent <Renderer> ().enabled = true;
 			canUpdateScore = true;	
