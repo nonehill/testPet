@@ -3,16 +3,23 @@ using System.Collections;
 
 public class PlatformManager : MonoBehaviour {
 
-	// Use this for initialization
+	[SerializeField]
+	private float groundSpeed;
+
+	[SerializeField]
+	private float distanceBehindCamera;
+
 	void Start ()
 	{
-		
+		groundSpeed = ElementsSpeedManager.instance.levelSpeed;
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
-		if (transform.position.x < Camera.main.transform.position.x - 25)
-			transform.position = new Vector3 (transform.position.x + 52, transform.position.y, transform.position.z);
+		transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
+
+		if (transform.position.x < -distanceBehindCamera)
+			transform.position = new Vector3 (60, transform.position.y, transform.position.z);
 	}
 }

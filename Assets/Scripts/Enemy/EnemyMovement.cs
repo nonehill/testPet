@@ -42,12 +42,12 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void FixedUpdate()
 	{	
-		rb2d.velocity = new Vector2(enemySpeed, rb2d.velocity.y);
-		
 		if (jump)
 		{		
-			rb2d.velocity = new Vector2(enemySpeed, jumpForce);
+			rb2d.velocity = new Vector2(0, jumpForce);
 			jump = false;
 		}	
 	}
+
+
 }

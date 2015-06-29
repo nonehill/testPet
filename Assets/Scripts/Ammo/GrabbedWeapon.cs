@@ -15,7 +15,7 @@ public class GrabbedWeapon : MonoBehaviour {
 	{
 		if (other.tag == "Player")
 		{
-			GetComponent<Renderer> ().enabled = false;
+			GetComponentInChildren<Renderer> ().enabled = false;
 			ammoManager.WeaponGrabed(weaponType);	
 			RespawnRocket();
 		}
@@ -28,7 +28,7 @@ public class GrabbedWeapon : MonoBehaviour {
 
 	void RespawnRocket()
 	{
-		GetComponent<Renderer> ().enabled = true;
-		transform.parent.transform.position = new Vector3(transform.parent.position.x + 100, Random.Range(-2, 2), 0);
+		GetComponentInChildren<Renderer> ().enabled = true;
+		transform.position = new Vector3 (Random.Range(20, 40), Random.Range(-2, 1), 0);
 	}
 }

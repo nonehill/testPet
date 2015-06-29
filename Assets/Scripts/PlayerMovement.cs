@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update() 
 	{
 
+
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 //		UNITY_EDITOR
 
@@ -42,21 +43,18 @@ public class PlayerMovement : MonoBehaviour {
 //		}
 //#endif
 
-		if (transform.position.x < Camera.main.transform.position.x - 10 || transform.position.y < Camera.main.transform.position.y - 10)
+		if (transform.position.x < - 2 || transform.position.y < -5)
 		{
-			Score.ResetScores();
+			HUD.ResetScores();
 			Application.LoadLevelAsync (1);
 		}	
 	}
 
 	void FixedUpdate ()
 	{
-//		transform.position += new Vector3 (speed * Time.smoothDeltaTime, 0, 0);
-		rb2d.velocity = new Vector2 (moveForce, rb2d.velocity.y);
-
 		if (jump)
 		{
-			rb2d.velocity = new Vector2 (moveForce, jumpForce);
+			rb2d.velocity = new Vector2 (0, jumpForce);
 			jump = false;
 		}	
 	}

@@ -54,17 +54,24 @@
      <Compile Include="Assets\Scripts\Ammo\RocketItem.cs" />
      <Compile Include="Assets\Scripts\CameraManager.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\Scripts\CoinMovements.cs" />
+     <Compile Include="Assets\Scripts\CoinParent.cs" />
      <Compile Include="Assets\Scripts\DeadScene.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDamage.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\SpawnEnemy.cs" />
+     <Compile Include="Assets\Scripts\EnemyBombScript.cs" />
+     <Compile Include="Assets\Scripts\Environment\BackgroundImage.cs" />
+     <Compile Include="Assets\Scripts\Environment\ElementsSpeedManager.cs" />
+     <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\HighGroundManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Powerup.cs" />
      <Compile Include="Assets\Scripts\SaveCatManager.cs" />
-     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\SpawnPlatforms.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/T/Documents/My projects/games(unity)/Cats and Rats/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>

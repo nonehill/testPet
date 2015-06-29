@@ -12,6 +12,10 @@ public class EnemyHealth : MonoBehaviour {
 	public Rigidbody2D goldCoin;
 	public Rigidbody2D silverCoin;
 
+	int countOfDeathAndAmountCoinsChange = 0;
+
+	int coinsFromEnemyDeath = 3;
+
 	public bool isDead {
 		get {
 			return _dead;
@@ -27,23 +31,42 @@ public class EnemyHealth : MonoBehaviour {
 	public void HitEnemy (float damage)
 	{
 		enemyHealth += enemyArmor - damage;
-
 		if (enemyHealth <= 0)
 		{
 			_dead = true;
-			for (int i = 0; i < 1; i++)
+			transform.parent.gameObject.SetActive(false);
+			for (int i = 0; i < coinsFromEnemyDeath; i++)
 			{
-				int coinValue = Random.Range(0, 5);
-				Rigidbody2D monsterCoin = (Rigidbody2D) Instantiate(coinValue == 4 ? goldCoin : silverCoin, transform.position, Quaternion.identity);
-				monsterCoin.AddForce(new Vector2(Random.Range(-300, 400), Random.Range(800, 1500)));
+				SpawnCoin ();
 			}
+			return;
 		}
+		SpawnCoin ();
+
 	}
 
+	void SpawnCoin ()
+	{
+		int coinValue = Random.Range(0, 5);
+		Rigidbody2D monsterCoin = (Rigidbody2D) Instantiate(coinValue == 4 ? goldCoin : silverCoin, transform.position, Quaternion.identity);
+		monsterCoin.transform.SetParent(GameObject.Find ("CoinParent").transform);
+		monsterCoin.AddForce(new Vector2(Random.Range(-100, 200), Random.Range(800, 1200)));
+	}
 
 
 	public void NewEnemyHealth (float health, float armor)
 	{
+		transform.parent.gameObject.SetActive(true);
+
+		countOfDeathAndAmountCoinsChange ++;
+
+		if (countOfDeathAndAmountCoinsChange >= 3) 
+		{
+			countOfDeathAndAmountCoinsChange = 0;
+			coinsFromEnemyDeath++;
+		}
+
+		transform.parent.transform.position = Vector3.zero;
 		enemyHealth = health;
 		enemyArmor = armor;
 		_dead = false;

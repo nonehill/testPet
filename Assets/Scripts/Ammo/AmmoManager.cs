@@ -19,6 +19,8 @@ public class AmmoManager : MonoBehaviour
 
 	public static AmmoType ammotype;
 
+	public float bulletVelocity;
+
 	void Awake ()
 	{
 		ammotype = AmmoType.Gun;
@@ -48,7 +50,7 @@ public class AmmoManager : MonoBehaviour
 			if (ammotype == AmmoType.Rocket)
 			{
 				rocket.SetActive(true);
-				rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2(40, 0);
+				rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2(bulletVelocity, 0);
 				rocket.GetComponent<Rigidbody2D> ().isKinematic = false;
 				rocketImage.SetActive(false);
 			}
@@ -62,7 +64,7 @@ public class AmmoManager : MonoBehaviour
 				if (!bullet.activeSelf)
 				{
 					bullet.SetActive(true);
-					bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(40, 0);
+					bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletVelocity, 0);
 					bullet.GetComponent<Rigidbody2D> ().isKinematic = false;
 					break;
 				}
