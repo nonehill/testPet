@@ -35,8 +35,6 @@ public class EnemyDamage : MonoBehaviour {
 
 	void Update()
 	{	
-		Debug.Log ("random y " + Random.Range(0, 400));
-
 		if (!enemyHealth.isDead) 
 		{
 			timeBetweenDropBomb += Time.deltaTime;

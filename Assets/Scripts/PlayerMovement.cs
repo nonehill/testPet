@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (transform.position.x < - 2 || transform.position.y < -5)
 		{
 			HUD.ResetScores();
-			Application.LoadLevelAsync (1);
+			Application.LoadLevelAsync (2);
 		}	
 	}
 

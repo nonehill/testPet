@@ -64,10 +64,12 @@
      <Compile Include="Assets\Scripts\EnemyBombScript.cs" />
      <Compile Include="Assets\Scripts\Environment\BackgroundImage.cs" />
      <Compile Include="Assets\Scripts\Environment\ElementsSpeedManager.cs" />
-     <Compile Include="Assets\Scripts\HUD.cs" />
+     <Compile Include="Assets\Scripts\HUD\GameplaySceneButtons.cs" />
+     <Compile Include="Assets\Scripts\HUD\HUD.cs" />
      <Compile Include="Assets\Scripts\HighGroundManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerGrabbedItems.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Powerup.cs" />

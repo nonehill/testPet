@@ -8,6 +8,8 @@ public class HUD : MonoBehaviour {
 	public List<GameObject> hearts;
 	public List<GameObject> hearts2;
 
+	static Text scoreLbl;
+
 	static int catchCount;
 	static int CatchCount
 	{
@@ -41,6 +43,8 @@ public class HUD : MonoBehaviour {
 	void Awake ()
 	{
 		instance = this;
+
+		scoreLbl = GameObject.Find ("ScoreLbl").GetComponent<Text> ();
 	}
 
 	public void FullHealth ()
@@ -66,13 +70,13 @@ public class HUD : MonoBehaviour {
 	public static void UpdateScore() 
 	{
 		CatchCount++;
-		GameObject.Find("Text").GetComponent<Text>().text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
+		scoreLbl.text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 	
 	public static void UpdateCoinsScore (int amount)
 	{
 		CoinsCount += amount;
-		GameObject.Find("Text").GetComponent<Text>().text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
+		scoreLbl.text = "Monsters: " + CatchCount + "          Coins: " + CoinsCount;
 	}
 	
 	public static void ResetScores()

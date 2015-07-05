@@ -1,18 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerHealth.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DeadScene.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyBombScript.cs" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/Enemy/EnemyMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemy/SpawnEnemy.cs" Line="53" Column="6" />
-      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="48" Column="7" />
-      <File FileName="Assets/Scripts/SpawnPlatforms.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="21" Column="34" />
-      <File FileName="Assets/Scripts/HUD.cs" Line="52" Column="40" />
-      <File FileName="Assets/Scripts/Coin.cs" Line="13" Column="1" />
-      <File FileName="Assets/Scripts/Environment/BackgroundImage.cs" Line="34" Column="23" />
+      <File FileName="Assets/Scripts/HUD/GameplaySceneButtons.cs" Line="22" Column="22" />
+      <File FileName="Assets/Scripts/Powerup.cs" Line="18" Column="3" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="8" Column="27" />
+      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="38" Column="1" />
+      <File FileName="Assets/Scripts/PlayerGrabbedItems.cs" Line="18" Column="21" />
+      <File FileName="Assets/Scripts/DeadScene.cs" Line="10" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
