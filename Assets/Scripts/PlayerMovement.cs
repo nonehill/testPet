@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour {
 	[HideInInspector] public bool jump = false;
 
 	public float moveForce = 365;
-	public float jumpForce = 700;
+	public float jumpForce = 100;
 	public Transform groundCheck;
 
 	public bool grounded = false;
 	Rigidbody2D rb2d;
 	Animator animator;
+
+	bool firstJump = false;
+	bool secondJump = false;
 
 
 	// Use this for initialization
@@ -25,23 +28,36 @@ public class PlayerMovement : MonoBehaviour {
 	void Update() 
 	{
 
-
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
-//		UNITY_EDITOR
 
-//#if UNITY_WEBPLAYER
-		if (Input.GetButtonDown ("Jump1") && grounded )
+#if UNITY_EDITOR
+		if (Input.GetButtonDown ("Jump1") && grounded)
 		{
 			jump = true;
+			firstJump = true;
 		}
-//#endif
+		else if (Input.GetButtonDown ("Jump1") && firstJump)
+		{
+			jump = true;
+			secondJump = true;
+		}
+#endif
 
-//#if !UNITY_EDITOR		
-//		if (Input.touchCount > 0 && grounded )
-//		{
-//			jump = true;
-//		}
-//#endif
+#if !UNITY_EDITOR		
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		{
+			if (grounded)
+			{
+				jump = true;
+				firstJump = true;
+			}
+			else if (firstJump)
+			{
+				jump = true;
+				secondJump = true;
+			}
+		}
+#endif
 
 		if (transform.position.x < - 2 || transform.position.y < -5)
 		{
@@ -56,6 +72,12 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			rb2d.velocity = new Vector2 (0, jumpForce);
 			jump = false;
+
+			if (secondJump)
+			{
+				firstJump = false;
+				secondJump = false;
+			}
 		}	
 	}
 

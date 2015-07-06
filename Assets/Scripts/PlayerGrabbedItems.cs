@@ -5,9 +5,8 @@ public class PlayerGrabbedItems : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D other)
 	{			
-		if (other.CompareTag("TimeScaller"))
+		if (other.gameObject.CompareTag("TimeScaller"))
 		{
-			Debug.Log("TimeScaller");
 			Time.timeScale = .5f;
 			Invoke("NormalTime", 1);
 		}			

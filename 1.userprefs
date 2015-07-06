@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerGrabbedItems.cs" Line="12" Column="7" />
+      <File FileName="Assets/Scripts/Powerup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TimeScallerItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameraManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlatformManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="56" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
