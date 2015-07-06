@@ -16,12 +16,20 @@ public class PlayerMovement : MonoBehaviour {
 	bool firstJump = false;
 	bool secondJump = false;
 
+	bool firePressed = false;
+
+	PlayerShoot playerShoot;
 
 	// Use this for initialization
 	void Awake()
 	{
 		rb2d     = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+	}
+
+	void Start ()
+	{
+		playerShoot = GameObject.Find("Gun").GetComponent<PlayerShoot>();
 	}
 	
 	// Update is called once per frame
@@ -44,17 +52,21 @@ public class PlayerMovement : MonoBehaviour {
 #endif
 
 #if !UNITY_EDITOR		
-		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		for (int i = 0; i < Input.touchCount; ++i)
 		{
-			if (grounded)
+			if ((Input.touchCount == 1 && Input.GetTouch(i).phase == TouchPhase.Began && !firePressed) ||
+			    (Input.touchCount > 1 && Input.GetTouch(i).phase == TouchPhase.Began && firePressed))
 			{
-				jump = true;
-				firstJump = true;
-			}
-			else if (firstJump)
-			{
-				jump = true;
-				secondJump = true;
+				if (grounded)
+				{
+					jump = true;
+					firstJump = true;
+				}
+				else if (firstJump)
+				{
+					jump = true;
+					secondJump = true;
+				}
 			}
 		}
 #endif
@@ -64,6 +76,21 @@ public class PlayerMovement : MonoBehaviour {
 			HUD.ResetScores();
 			Application.LoadLevelAsync (2);
 		}	
+	}
+
+	public void FirePressed ()
+	{
+		Debug.Log("Fire");
+		playerShoot.Fire();
+		firePressed = true;
+	}
+
+	public void StopFire ()
+	{
+		Debug.Log("Stop");
+		playerShoot.StopFire();
+
+		firePressed = false;
 	}
 
 	void FixedUpdate ()
@@ -80,5 +107,4 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}	
 	}
-
 }

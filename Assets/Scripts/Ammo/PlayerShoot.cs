@@ -3,11 +3,12 @@ using System.Collections;
 
 public class PlayerShoot : MonoBehaviour {
 
-	public GameObject rocket;
 	public float timeBetweenBullets = 2;
 	float time = 2;
 
 	AmmoManager ammoManager;
+
+	bool fire = false;
 
 	void Awake ()
 	{
@@ -17,14 +18,24 @@ public class PlayerShoot : MonoBehaviour {
 	void Update ()
 	{
 		time += Time.deltaTime;
+
+		if (fire)
+		{
+			if (time >= timeBetweenBullets)
+			{
+				time = 0;
+				ammoManager.Shoot();
+			}
+		}	
 	}
 
-	public void ShootPressed ()
+	public void Fire ()
 	{
-		if (time >= timeBetweenBullets)
-		{
-			time = 0;
-			ammoManager.Shoot();
-		}
+		fire = true;
+	}
+
+	public void StopFire ()
+	{
+		fire = false;
 	}
 }

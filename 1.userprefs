@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlatformManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerGrabbedItems.cs" Line="12" Column="7" />
-      <File FileName="Assets/Scripts/Powerup.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TimeScallerItem.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CameraManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlatformManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="56" Column="9" />
+      <File FileName="Assets/Scripts/PlatformManager.cs" Line="25" Column="75" />
+      <File FileName="Assets/Scripts/HighGroundManager.cs" Line="23" Column="63" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="46" Column="4" />
+      <File FileName="Assets/Scripts/Ammo/PlayerShoot.cs" Line="14" Column="3" />
+      <File FileName="Assets/Scripts/Ammo/AmmoManager.cs" Line="45" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
