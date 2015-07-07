@@ -24,6 +24,10 @@ public class SpawnEnemy : MonoBehaviour {
 	bool createEnemy = false;
 
 	public GameObject enemy;
+	public bool checkGroundForSpawn = false;
+
+	public Transform startRay;
+	public Transform endRay;
 
 	// Use this for initialization
 	void Start()
@@ -52,7 +56,9 @@ public class SpawnEnemy : MonoBehaviour {
 			}
 		}		
 
-		if (!canUpdateScore && time >= timeSpawnAfterDeath || enemy.transform.position.y <= -3.5f) 
+		checkGroundForSpawn = Physics2D.Linecast(startRay.position, endRay.position, 1 << LayerMask.NameToLayer ("Ground"));
+
+		if ((!canUpdateScore && time >= timeSpawnAfterDeath || enemy.transform.position.y <= -3.5f) && checkGroundForSpawn)
 		{			
 			time = 0;
 

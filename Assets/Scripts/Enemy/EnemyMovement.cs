@@ -8,8 +8,9 @@ public class EnemyMovement : MonoBehaviour {
 	
 	public float enemySpeed = 5;
 	public float jumpForce = 30;
+
 	public Transform groundCheck;
-	
+
 	public bool grounded = false;
 	Rigidbody2D rb2d;
 	Animator animator;
@@ -37,7 +38,17 @@ public class EnemyMovement : MonoBehaviour {
 		if (other.CompareTag ("JumpPoint") && grounded)
 		{
 			jump = true;
+			Invoke("SecondJump", .4f);
 		}
+
+		if (other.CompareTag("DeathJumpPoint"))		
+			SecondJump();
+	}
+
+	void SecondJump ()
+	{
+		if (!grounded)
+			jump = true;
 	}
 	
 	void FixedUpdate()
@@ -48,6 +59,4 @@ public class EnemyMovement : MonoBehaviour {
 			jump = false;
 		}	
 	}
-
-
 }

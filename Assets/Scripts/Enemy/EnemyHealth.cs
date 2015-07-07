@@ -50,7 +50,7 @@ public class EnemyHealth : MonoBehaviour {
 		int coinValue = Random.Range(0, 5);
 		Rigidbody2D monsterCoin = (Rigidbody2D) Instantiate(coinValue == 4 ? goldCoin : silverCoin, transform.position, Quaternion.identity);
 		monsterCoin.transform.SetParent(GameObject.Find ("CoinParent").transform);
-		monsterCoin.AddForce(new Vector2(Random.Range(-100, 200), Random.Range(800, 1200)));
+		monsterCoin.AddForce(new Vector2(Random.Range(-200, 450), Random.Range(800, 1200)));
 	}
 
 

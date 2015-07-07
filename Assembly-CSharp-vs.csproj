@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Enemy\SpawnEnemy.cs" />
      <Compile Include="Assets\Scripts\EnemyBombScript.cs" />
      <Compile Include="Assets\Scripts\Environment\BackgroundImage.cs" />
+     <Compile Include="Assets\Scripts\Environment\BackgroundScroll.cs" />
      <Compile Include="Assets\Scripts\Environment\ElementsSpeedManager.cs" />
      <Compile Include="Assets\Scripts\HUD\GameplaySceneButtons.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />

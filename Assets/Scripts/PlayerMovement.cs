@@ -78,6 +78,21 @@ public class PlayerMovement : MonoBehaviour {
 		}	
 	}
 
+	public void JumpPressed ()
+	{	
+		Debug.Log("Jump");
+		if (grounded)
+		{
+			jump = true;
+			firstJump = true;
+		}
+		else if (firstJump)
+		{
+			jump = true;
+			secondJump = true;
+		}
+	}
+
 	public void FirePressed ()
 	{
 		Debug.Log("Fire");

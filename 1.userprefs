@@ -1,12 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlatformManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/EnemyHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlatformManager.cs" Line="25" Column="75" />
-      <File FileName="Assets/Scripts/HighGroundManager.cs" Line="23" Column="63" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="46" Column="4" />
-      <File FileName="Assets/Scripts/Ammo/PlayerShoot.cs" Line="14" Column="3" />
-      <File FileName="Assets/Scripts/Ammo/AmmoManager.cs" Line="45" Column="2" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="39" Column="76" />
+      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="53" Column="58" />
+      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/SpawnEnemy.cs" Line="48" Column="52" />
+      <File FileName="Assets/Scripts/Enemy/EnemyMovement.cs" Line="41" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
