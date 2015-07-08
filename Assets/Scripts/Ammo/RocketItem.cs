@@ -18,6 +18,6 @@ public class RocketItem : MonoBehaviour
 		transform.position -= new Vector3 (speed * Time.deltaTime, 0, 0);
 
 		if (transform.position.x <= -5)
-			transform.position = new Vector3 (Random.Range(20, 40), Random.Range(respawnMin_Y, respawnMax_Y), 0);
+			transform.position = new Vector3 (Random.Range(20, 40), Random.Range(respawnMin_Y, respawnMax_Y), transform.position.z);
 	}
 }

@@ -23,7 +23,10 @@ public class PlayerHealth : MonoBehaviour {
 			HUD.instance.ReduceHeart();
 
 			if (health <= 0)
-				Application.LoadLevelAsync (1);
+			{
+				CanvasManager.instance.ShowDeathPanel();
+				gameObject.SetActive(false);
+			}
 		}
 	}
 }

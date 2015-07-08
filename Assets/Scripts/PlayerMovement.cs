@@ -74,7 +74,8 @@ public class PlayerMovement : MonoBehaviour {
 		if (transform.position.x < - 2 || transform.position.y < -5)
 		{
 			HUD.ResetScores();
-			Application.LoadLevelAsync (2);
+			CanvasManager.instance.ShowDeathPanel();
+			gameObject.SetActive(false);
 		}	
 	}
 

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Ammo\Rocket.cs" />
      <Compile Include="Assets\Scripts\Ammo\RocketItem.cs" />
      <Compile Include="Assets\Scripts\CameraManager.cs" />
+     <Compile Include="Assets\Scripts\CanvasManager.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\CoinMovements.cs" />
      <Compile Include="Assets\Scripts\CoinParent.cs" />

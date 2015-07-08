@@ -7,8 +7,10 @@ public class HighGroundManager : MonoBehaviour {
 	public float max_Y = 2;
 	public float min_Y = -1.5f;
 
+	public float distanceBehindCmaraRespawn = -7;
+
 	[SerializeField]
-	private float highGroundSpeed = 10;
+	private float highGroundSpeed;
 
 	// Use this for initialization
 	void Start () 
@@ -30,7 +32,7 @@ public class HighGroundManager : MonoBehaviour {
 	{
 		transform.position -= new Vector3 (highGroundSpeed * Time.deltaTime, 0, 0);
 
-		if (transform.position.x <= -5)
-			transform.position = new Vector3 (Random.Range(15, 25), Random.Range(min_Y, max_Y), transform.position.z);
+		if (transform.position.x <= distanceBehindCmaraRespawn)
+			transform.position = new Vector3 (Random.Range(15, 30), Random.Range(min_Y, max_Y), transform.position.z);
 	}
 }

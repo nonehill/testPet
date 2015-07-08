@@ -8,7 +8,7 @@ public class BackgroundScroll : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		posX += speed;
+		posX += speed * Time.timeScale;
 
 		if (posX > 1.0f)
 			posX -= 1.0f;
