@@ -96,16 +96,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void FirePressed ()
 	{
-		Debug.Log("Fire");
 		playerShoot.Fire();
 		firePressed = true;
 	}
 
 	public void StopFire ()
 	{
-		Debug.Log("Stop");
 		playerShoot.StopFire();
-
 		firePressed = false;
 	}
 

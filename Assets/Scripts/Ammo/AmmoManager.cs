@@ -33,7 +33,6 @@ public class AmmoManager : MonoBehaviour
 		case AmmoType.Rocket:
 			ammotype = AmmoType.Rocket;
 			bonusWeapon = true;
-			rocketImage.SetActive(true);
 			break;
 
 		case AmmoType.Gun:
@@ -50,9 +49,9 @@ public class AmmoManager : MonoBehaviour
 			if (ammotype == AmmoType.Rocket)
 			{
 				rocket.SetActive(true);
+				rocket.transform.position = gun.transform.position;
 				rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2(bulletVelocity, 0);
 				rocket.GetComponent<Rigidbody2D> ().isKinematic = false;
-				rocketImage.SetActive(false);
 			}
 		} 
 		else 
@@ -63,6 +62,7 @@ public class AmmoManager : MonoBehaviour
 				
 				if (!bullet.activeSelf)
 				{
+					bullet.transform.position = gun.transform.position;
 					bullet.SetActive(true);
 					bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletVelocity, 0);
 					bullet.GetComponent<Rigidbody2D> ().isKinematic = false;

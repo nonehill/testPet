@@ -10,7 +10,6 @@ public class Rocket : MonoBehaviour {
 	{
 		if (other.CompareTag ("Destroyer"))
 		{
-			GetComponent<Renderer>().enabled = true;
 			transform.position = gun.transform.position;
 			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
 			GetComponent<Rigidbody2D> ().isKinematic = true;

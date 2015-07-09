@@ -13,7 +13,7 @@ public class EnemyDamage : MonoBehaviour {
 		if (other.CompareTag ("Player") || other.CompareTag ("Ammo"))
 		{
 			float damage = 0;
-			other.GetComponent<Renderer>().enabled = false;
+			other.gameObject.SetActive(false);
 
 			switch (AmmoManager.ammotype)
 			{

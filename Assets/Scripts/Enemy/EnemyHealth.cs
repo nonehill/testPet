@@ -42,7 +42,6 @@ public class EnemyHealth : MonoBehaviour {
 			return;
 		}
 		SpawnCoin ();
-
 	}
 
 	void SpawnCoin ()
@@ -53,12 +52,11 @@ public class EnemyHealth : MonoBehaviour {
 		monsterCoin.AddForce(new Vector2(Random.Range(-200, 450), Random.Range(800, 1200)));
 	}
 
-
 	public void NewEnemyHealth (float health, float armor)
 	{
 		transform.parent.gameObject.SetActive(true);
 
-		countOfDeathAndAmountCoinsChange ++;
+		countOfDeathAndAmountCoinsChange++;
 
 		if (countOfDeathAndAmountCoinsChange >= 3) 
 		{

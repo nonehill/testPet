@@ -6,7 +6,6 @@ public class Coin : MonoBehaviour {
 	Vector3 originalPos;
 	float speed;
 
-	
 	// Update is called once per frame
 	void OnTriggerEnter2D (Collider2D other) 
 	{
@@ -21,5 +20,4 @@ public class Coin : MonoBehaviour {
 			Destroy(transform.parent.gameObject);
 		}
 	}
-
 }
