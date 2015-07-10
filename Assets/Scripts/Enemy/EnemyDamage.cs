@@ -43,13 +43,15 @@ public class EnemyDamage : MonoBehaviour {
 		}
 	}
 
-
 	void DropBomb ()
 	{
 		timeBetweenDropBomb = 0;
 		bomb.transform.position = transform.parent.transform.position;
 		bomb.SetActive (true);
-		bomb.GetComponent<Rigidbody2D> ().AddForce (new Vector2(Random.Range(-50, -200), Random.Range(400, 600)));
+
+		int layOrDropBomb = Random.Range(0,3);
+
+		bomb.GetComponent<Rigidbody2D> ().AddForce (new Vector2(Random.Range(-50, -200), layOrDropBomb == 0 ? 10 : Random.Range(350, 600)));
 	}
 	
 	IEnumerator EnemyHit ()

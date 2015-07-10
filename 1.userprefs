@@ -1,8 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../FGFactory projects/Babyloonz/Assets/Scripts/MainMenuSwipeControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HUD/HUD.cs">
     <Files>
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/MainMenuSwipeControl.cs" Line="22" Column="21" />
+      <File FileName="Assets/Scripts/Ammo/Rocket.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/Ammo/AmmoManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/EnemyDamage.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Ammo/RocketItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Ammo/PlayerShoot.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Environment/PlatformBouncing.cs" Line="29" Column="6" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="20" Column="39" />
+      <File FileName="Assets/Scripts/HUD/HUD.cs" Line="58" Column="2" />
+      <File FileName="Assets/Scripts/TimeScallerItem.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

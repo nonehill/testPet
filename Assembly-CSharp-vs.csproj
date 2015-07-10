@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Environment\PlatformBouncing.cs" />
      <Compile Include="Assets\Scripts\HUD\GameplaySceneButtons.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\HealthItem.cs" />
      <Compile Include="Assets\Scripts\HighGroundManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\PlatformManager.cs" />

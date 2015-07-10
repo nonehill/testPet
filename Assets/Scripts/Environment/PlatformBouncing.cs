@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlatformBouncing : MonoBehaviour {
 
 	Animator anim;
-	public List<GameObject> flinders;
+	public List<ParticleSystem> flinders;
 
 	void Start ()
 	{
@@ -18,18 +18,22 @@ public class PlatformBouncing : MonoBehaviour {
 		{
 			anim.SetTrigger("bouncing");
 
+			bool particleGo = false;
+
 			if (gameObject.name == "platform")
 			{
 				for (int i = 0; i < flinders.Count; i++)
 				{
-					GameObject flinder = (GameObject) flinders[i];
-					if (!flinder.activeSelf)
+					ParticleSystem flinder = (ParticleSystem) flinders[i];
+
+					if (!flinder.isPlaying && !particleGo)
 					{
-						flinder.transform.SetParent(transform);
+						particleGo = true;
+						flinder.gameObject.transform.SetParent(transform);
 						Vector3 newPos = gameObject.transform.position;
-						flinder.transform.position = new Vector3(Random.Range(newPos.x - 1.5f, newPos.x + 1.5f), newPos.y, newPos.z);
-						flinder.SetActive(true);
-						StartCoroutine(DisableFlinders(flinder, 1f));
+						flinder.gameObject.transform.position = new Vector3(newPos.x, newPos.y - .3f, newPos.z);
+						flinder.Play();
+						StartCoroutine(StopParticle(flinder, .5f));
 						break;
 					}
 				}
@@ -37,11 +41,10 @@ public class PlatformBouncing : MonoBehaviour {
 		}
 	}	 
 
-	IEnumerator DisableFlinders (GameObject flinder, float delay)
+	IEnumerator StopParticle(ParticleSystem particle, float timeDelay)
 	{
-		yield return new WaitForSeconds(delay);
-		flinder.transform.parent = null;
-		flinder.SetActive(false);
+		yield return new WaitForSeconds (timeDelay);
+		particle.Stop();
 	}
 
 	void OnTriggerExit2D (Collider2D other)

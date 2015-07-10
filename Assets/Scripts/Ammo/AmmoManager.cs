@@ -30,14 +30,14 @@ public class AmmoManager : MonoBehaviour
 	{
 		switch (weaponType)
 		{
-		case AmmoType.Rocket:
-			ammotype = AmmoType.Rocket;
-			bonusWeapon = true;
-			break;
+			case AmmoType.Rocket:
+				ammotype = AmmoType.Rocket;
+				bonusWeapon = true;
+				break;
 
-		case AmmoType.Gun:
-			gun.SetActive(true);
-			break;
+			case AmmoType.Gun:
+				gun.SetActive(true);
+				break;
 		}
 	}
 
@@ -52,6 +52,7 @@ public class AmmoManager : MonoBehaviour
 				rocket.transform.position = gun.transform.position;
 				rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2(bulletVelocity, 0);
 				rocket.GetComponent<Rigidbody2D> ().isKinematic = false;
+				ammotype = AmmoType.Gun;
 			}
 		} 
 		else 

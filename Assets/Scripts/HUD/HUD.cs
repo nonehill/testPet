@@ -47,15 +47,19 @@ public class HUD : MonoBehaviour {
 		scoreLbl = GameObject.Find ("ScoreLbl").GetComponent<Text> ();
 	}
 
-	public void FullHealth ()
+	public void EnableHeart ()
 	{
-		for (int i = 0; i < hearts.Count; i++)
+		for (int i = hearts.Count; i--> 0; )
 		{
-			hearts[i].gameObject.SetActive(true);
+			if(!hearts[i].activeSelf)
+			{
+				hearts[i].SetActive(true);
+				break;
+			}
 		}
 	}
 
-	public void ReduceHeart ()
+	public void DisableHeart ()
 	{
 		for (int i = 0; i < hearts.Count; i++)
 		{
