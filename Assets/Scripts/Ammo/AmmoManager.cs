@@ -52,7 +52,6 @@ public class AmmoManager : MonoBehaviour
 				rocket.transform.position = gun.transform.position;
 				rocket.GetComponent<Rigidbody2D> ().velocity = new Vector2(bulletVelocity, 0);
 				rocket.GetComponent<Rigidbody2D> ().isKinematic = false;
-				ammotype = AmmoType.Gun;
 			}
 		} 
 		else 
@@ -72,4 +71,6 @@ public class AmmoManager : MonoBehaviour
 			}
 		}
 	}
+
+
 }

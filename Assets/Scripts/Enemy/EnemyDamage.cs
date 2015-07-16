@@ -17,14 +17,16 @@ public class EnemyDamage : MonoBehaviour {
 
 			switch (AmmoManager.ammotype)
 			{
-			case AmmoType.Gun:
-				damage = 10;
-				break;
-					
-			case AmmoType.Rocket:
-				damage = 20;
-				break;
+				case AmmoType.Gun:
+					damage = 10;
+					break;
+						
+				case AmmoType.Rocket:
+					damage = 20;
+					break;
 			}		
+
+			AmmoManager.ammotype = AmmoType.Gun;
 
 			enemyHealth.HitEnemy(damage);
 
@@ -35,6 +37,8 @@ public class EnemyDamage : MonoBehaviour {
 
 	void Update()
 	{	
+		Debug.Log(AmmoManager.ammotype);
+
 		if (!enemyHealth.isDead) 
 		{
 			timeBetweenDropBomb += Time.deltaTime;
