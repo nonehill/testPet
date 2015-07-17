@@ -1,18 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../FGFactory projects/Babyloonz/Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs">
     <Files>
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/PlayerMovement.cs" Line="99" Column="24" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/Summer Animations/AppleFallAnimation.cs" Line="22" Column="3" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/UniversalAnimations/ConeFallingAnimation.cs" Line="32" Column="4" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/WinterAnimations/ToyAnimation.cs" Line="8" Column="34" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/Cinema/DragonCinema.cs" Line="55" Column="27" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/Summer Animations/LakeWavesAnimation.cs" Line="33" Column="3" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/House stuff/DoorAnimations.cs" Line="79" Column="22" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/House stuff/HouseStuffAnimationsDetect.cs" Line="1" Column="1" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/UniversalAnimations/UniversalAnimationsDetect.cs" Line="986" Column="54" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Amimations/Summer Animations/AnimationDetect.cs" Line="285" Column="55" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/MusicScript.cs" Line="58" Column="27" />
+      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs" Line="11" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
