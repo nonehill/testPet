@@ -12,20 +12,15 @@ public class HighGroundManager : MonoBehaviour {
 	[SerializeField]
 	private float highGroundSpeed;
 
+	public float max_X;
+	public float min_X;
+
 	// Use this for initialization
 	void Start () 
 	{
 		highGroundSpeed = ElementsSpeedManager.instance.levelSpeed;
 		originalPos = transform.position;
 	}
-	
-//	void OnTriggerEnter2D (Collider2D other)
-//	{
-//		if (other.CompareTag("Player"))
-//		{
-//			Debug.Log("Player Here");
-//		}
-//	}
 
 	// Update is called once per frame
 	void Update ()
@@ -33,6 +28,6 @@ public class HighGroundManager : MonoBehaviour {
 		transform.position -= new Vector3 (highGroundSpeed * Time.deltaTime, 0, 0);
 
 		if (transform.position.x <= distanceBehindCmaraRespawn)
-			transform.position = new Vector3 (Random.Range(15, 30), Random.Range(min_Y, max_Y), transform.position.z);
+			transform.position = new Vector3 (Random.Range(min_X, max_X), Random.Range(min_Y, max_Y), transform.position.z);
 	}
 }

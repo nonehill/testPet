@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs">
     <Files>
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs" Line="11" Column="8" />
+      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs" Line="34" Column="21" />
+      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/MusicScript.cs" Line="52" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

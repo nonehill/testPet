@@ -16,6 +16,8 @@ public class EnemyHealth : MonoBehaviour {
 
 	int coinsFromEnemyDeath = 3;
 
+	public ParticleSystem hitEffect;
+
 	public bool isDead {
 		get {
 			return _dead;
@@ -27,9 +29,17 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		_dead = false;
 	}
-	
+
+	void Update ()
+	{
+
+	}
+
 	public void HitEnemy (float damage)
 	{
+		hitEffect.transform.position = GameObject.Find("Enemy").transform.position;
+		hitEffect.Play();
+
 		enemyHealth += enemyArmor - damage;
 		if (enemyHealth <= 0)
 		{

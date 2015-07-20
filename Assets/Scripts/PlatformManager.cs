@@ -9,11 +9,6 @@ public class PlatformManager : MonoBehaviour {
 	[SerializeField]
 	private float distanceBehindCamera;
 
-	public float maxY;
-	public float minY;
-
-	public float respawnFroundPosX = 70;
-
 	void Start ()
 	{
 		groundSpeed = ElementsSpeedManager.instance.levelSpeed;
@@ -25,6 +20,10 @@ public class PlatformManager : MonoBehaviour {
 		transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
 
 		if (transform.position.x < -distanceBehindCamera)
-			transform.position = new Vector3 (respawnFroundPosX , Random.Range(minY, maxY) , transform.position.z);
+		{
+			Vector3 newPos = PlatformSpawnManager.instance.GetNewPosition();			
+			transform.position = new Vector3 (newPos.x + 15, transform.position.y, transform.position.z);
+			PlatformSpawnManager.instance.SetLastPlatformTransform();
+		}
 	}
 }
