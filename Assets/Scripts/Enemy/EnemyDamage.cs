@@ -37,8 +37,6 @@ public class EnemyDamage : MonoBehaviour {
 
 	void Update()
 	{	
-		Debug.Log(AmmoManager.ammotype);
-
 		if (!enemyHealth.isDead) 
 		{
 			timeBetweenDropBomb += Time.deltaTime;

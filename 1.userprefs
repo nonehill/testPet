@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HighGroundManager.cs">
     <Files>
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/LevelSounds.cs" Line="34" Column="21" />
-      <File FileName="../../FGFactory projects/Babyloonz/Assets/Scripts/Audio/MusicScript.cs" Line="52" Column="23" />
+      <File FileName="Assets/Scripts/HighGroundManager.cs" Line="15" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

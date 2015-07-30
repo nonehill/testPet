@@ -9,6 +9,8 @@ public class PlatformManager : MonoBehaviour {
 	[SerializeField]
 	private float distanceBehindCamera;
 
+	public bool move = false;
+
 	void Start ()
 	{
 		groundSpeed = ElementsSpeedManager.instance.levelSpeed;
@@ -17,13 +19,26 @@ public class PlatformManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
+		if (move)
+			transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
 
-		if (transform.position.x < -distanceBehindCamera)
+		CheckPosition ();
+	}
+
+	void CheckPosition ()
+	{
+		if (transform.position.x < distanceBehindCamera)
 		{
-			Vector3 newPos = PlatformSpawnManager.instance.GetNewPosition();			
-			transform.position = new Vector3 (newPos.x + 15, transform.position.y, transform.position.z);
-			PlatformSpawnManager.instance.SetLastPlatformTransform();
+			move = false;
+			transform.position = new Vector3 (100, transform.position.y, transform.position.z);
+			PlatformSpawnManager.instance.SpawnNewPlatformAddCurrentToSpawnList(gameObject);
 		}
+	}
+
+	void StartMoving ()
+	{
+		Vector3 newPos = PlatformSpawnManager.instance.GetPositionForSpawn();			
+		transform.position = new Vector3 (newPos.x + Random.Range(14, 19), transform.position.y, transform.position.z);
+		move = true;
 	}
 }
