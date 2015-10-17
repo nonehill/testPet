@@ -39,23 +39,16 @@ public class Menu : MonoBehaviour {
 
 	public void MonstersCollectionPressed ()
 	{
-		canvasAnim.SetBool ("hideMenu", true);
-		monstersCanvas.SetActive (true);
-		monstersCanvas.SendMessage ("Show");
+		canvasAnim.SetBool ("hideMenu", true);	
 	}
 
 	public void WorkShopPressed ()
 	{
 		canvasAnim.SetBool ("hideMenu", true);
-		workshopCanvas.SetActive (true);
 	}
 
 	public void BackPressed ()
 	{ 
-		monstersCanvas.SendMessage ("Hide");
-		if (workshopCanvas.activeSelf)
-				workshopCanvas.SetActive (false);
-
 		canvasAnim.SetBool ("hideMenu", false);
 	}
 }

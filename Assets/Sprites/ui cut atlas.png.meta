@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: 76334cc43420646acb4079d2e74711f5
+timeCreated: 1444562752
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ui cut atlas_0
+    21300002: ui cut atlas_1
+    21300004: ui cut atlas_2
+    21300006: ui cut atlas_3
+    21300008: ui cut atlas_4
+    21300010: ui cut atlas_5
+    21300012: ui cut atlas_6
+    21300014: ui cut atlas_7
+    21300016: ui cut atlas_8
+    21300018: ui cut atlas_9
+    21300020: ui cut atlas_10
+    21300022: ui cut atlas_11
+    21300024: ui cut atlas_12
+    21300026: ui cut atlas_13
+    21300028: ui cut atlas_14
+    21300030: ui cut atlas_15
+    21300032: ui cut atlas_16
+    21300034: ui cut atlas_17
+    21300036: ui cut atlas_18
+    21300038: ui cut atlas_19
+    21300040: ui cut atlas_20
+    21300042: ui cut atlas_21
+    21300044: ui cut atlas_22
+    21300046: ui cut atlas_23
+    21300048: ui cut atlas_24
+    21300050: ui cut atlas_25
+    21300052: ui cut atlas_26
+    21300054: ui cut atlas_27
+    21300056: ui cut atlas_28
+    21300058: ui cut atlas_29
+    21300060: ui cut atlas_30
+    21300062: ui cut atlas_31
+    21300064: ui cut atlas_32
+    21300066: ui cut atlas_33
+    21300068: ui cut atlas_34
+    21300070: ui cut atlas_35
+    21300072: ui cut atlas_36
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ui cut atlas_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1213
+        width: 533
+        height: 594
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1770
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_2
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1582
+        width: 177
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1607
+        width: 191
+        height: 131
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_4
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1663
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1602
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_6
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1442
+        width: 98
+        height: 167
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1440
+        width: 157
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1549
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_9
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1443
+        width: 125
+        height: 145
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_10
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1500
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_11
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1455
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_12
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1447
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_13
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1427
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_14
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1270
+        width: 165
+        height: 169
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_15
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1378
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_16
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 1096
+        width: 135
+        height: 346
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_17
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 1341
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_18
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1321
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_19
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1321
+        width: 91
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1136
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_21
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1239
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 969
+        width: 63
+        height: 156
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_23
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1077
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_24
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 869
+        width: 323
+        height: 339
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_25
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 860
+        width: 300
+        height: 347
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_26
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1025
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_27
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 874
+        width: 74
+        height: 79
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_28
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 905
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_29
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 863
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_30
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 869
+        width: 211
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_31
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 878
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_32
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 861
+        width: 92
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_33
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 860
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_34
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 899
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_35
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 898
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ui cut atlas_36
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 946
+        height: 860
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

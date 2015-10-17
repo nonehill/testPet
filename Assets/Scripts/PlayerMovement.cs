@@ -35,41 +35,40 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update() 
 	{
-
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 
-#if UNITY_EDITOR
-		if (Input.GetButtonDown ("Jump1") && grounded)
+		if (Input.GetKeyDown(KeyCode.Space) && grounded)
 		{
+			Debug.Log("JUMP");
 			jump = true;
 			firstJump = true;
 		}
-		else if (Input.GetButtonDown ("Jump1") && firstJump)
+		else if (Input.GetKeyDown(KeyCode.Space) && firstJump)
 		{
 			jump = true;
 			secondJump = true;
-		}
-#endif
+		}    
 
-#if !UNITY_EDITOR		
-		for (int i = 0; i < Input.touchCount; ++i)
-		{
-			if ((Input.touchCount == 1 && Input.GetTouch(i).phase == TouchPhase.Began && !firePressed) ||
-			    (Input.touchCount > 1 && Input.GetTouch(i).phase == TouchPhase.Began && firePressed))
-			{
-				if (grounded)
-				{
-					jump = true;
-					firstJump = true;
-				}
-				else if (firstJump)
-				{
-					jump = true;
-					secondJump = true;
-				}
-			}
-		}
-#endif
+//
+//#if !UNITY_EDITOR
+//		for (int i = 0; i < Input.touchCount; ++i)
+//		{
+//			if ((Input.touchCount == 1 && Input.GetTouch(i).phase == TouchPhase.Began && !firePressed) ||
+//			    (Input.touchCount > 1 && Input.GetTouch(i).phase == TouchPhase.Began && firePressed))
+//			{
+//				if (grounded)
+//				{
+//					jump = true;
+//					firstJump = true;
+//				}
+//				else if (firstJump)
+//				{
+//					jump = true;
+//					secondJump = true;
+//				}
+//			}
+//		}
+//#endif
 
 		if (transform.position.x < - 2 || transform.position.y < -5)
 		{
@@ -81,7 +80,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void JumpPressed ()
 	{	
-		Debug.Log("Jump");
 		if (grounded)
 		{
 			jump = true;
