@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\Environment\TreesRespawn.cs" />
      <Compile Include="Assets\Scripts\HUD\GameplaySceneButtons.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />
+     <Compile Include="Assets\Scripts\HUD\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HealthItem.cs" />
      <Compile Include="Assets\Scripts\HighGroundManager.cs" />
      <Compile Include="Assets\Scripts\Menu\Menu.cs" />
