@@ -16,7 +16,6 @@ public class Menu : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Invoke ("HideSplash", .5f);
 		Invoke ("MovePlatform", 1f);
 		canvasAnim = canvas.GetComponent<Animator> ();
 	}
@@ -26,12 +25,6 @@ public class Menu : MonoBehaviour {
 		canvas.SetActive (true);
 	}
 
-	void HideSplash ()
-	{
-		menuMusic.Play ();
-		splashImg.SendMessage ("StartHide");
-	}
-	
 	public void PlayPressed () 
 	{
 		Application.LoadLevel ("MainScene");
@@ -54,8 +47,9 @@ public class Menu : MonoBehaviour {
 	{ 
 		monstersCanvas.SendMessage ("Hide");
 		if (workshopCanvas.activeSelf)
-				workshopCanvas.SetActive (false);
-
+		{
+			workshopCanvas.SetActive (false);
+		}
 		canvasAnim.SetBool ("hideMenu", false);
 	}
 }
