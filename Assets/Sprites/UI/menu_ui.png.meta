@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 33f812c9cea44470980f7e87e959d674
-timeCreated: 1445891778
+timeCreated: 1445900822
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,7 +62,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -161,10 +161,10 @@ TextureImporter:
     - name: ui cut atlas_9
       rect:
         serializedVersion: 2
-        x: 539
-        y: 923
-        width: 282
-        height: 281
+        x: 540
+        y: 926
+        width: 284
+        height: 284
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -18,6 +18,10 @@ public class EnemyHealth : MonoBehaviour {
 
 	public ParticleSystem hitEffect;
 
+	public GameObject healthBar;
+
+	float fullHealth = 0;
+
 	public bool isDead {
 		get {
 			return _dead;
@@ -27,12 +31,9 @@ public class EnemyHealth : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		healthBar = GameObject.Find ("HealthBar");
 		_dead = false;
-	}
-
-	void Update ()
-	{
-
+		fullHealth = enemyHealth;
 	}
 
 	public void HitEnemy (float damage)
@@ -41,8 +42,12 @@ public class EnemyHealth : MonoBehaviour {
 		hitEffect.Play();
 
 		enemyHealth += enemyArmor - damage;
+		Debug.Log ("fullHealth = " + fullHealth);
+		healthBar.GetComponent<HealthBar> ().UpdateText (enemyHealth < 0 ? 0 : enemyHealth, fullHealth);
+
 		if (enemyHealth <= 0)
 		{
+			healthBar.SetActive (false);
 			_dead = true;
 			transform.parent.gameObject.SetActive(false);
 			for (int i = 0; i < coinsFromEnemyDeath; i++)
@@ -64,6 +69,10 @@ public class EnemyHealth : MonoBehaviour {
 
 	public void NewEnemyHealth (float health, float armor)
 	{
+		enemyHealth = health;
+		fullHealth = enemyHealth;
+		healthBar.GetComponent<HealthBar> ().UpdateText (health, health);
+		healthBar.SetActive (true);
 		transform.parent.gameObject.SetActive(true);
 
 		countOfDeathAndAmountCoinsChange++;
@@ -79,4 +88,6 @@ public class EnemyHealth : MonoBehaviour {
 		enemyArmor = armor;
 		_dead = false;
 	}
+
+
 }

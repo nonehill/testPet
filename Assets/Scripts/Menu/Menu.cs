@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Menu : MonoBehaviour {
 
-	public GameObject splashImg;
 	public AudioSource menuMusic;
 	public GameObject canvas;
 	public GameObject monstersCanvas;

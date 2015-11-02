@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public enum PowerupKind {
+	None = 0,
+	TimeScaller = 1,
+	CoinsMagnet = 2
+}
+
 public class Powerup : MonoBehaviour {
+
 	float speed;
 	
 	float respawnMin_Y = -2;
 	float respawnMax_Y = 1;
+
+	public PowerupKind powerupKind;
 	
 	void Start ()
 	{
@@ -16,8 +25,10 @@ public class Powerup : MonoBehaviour {
 	{
 		transform.position -= new Vector3 (speed * Time.deltaTime, 0, 0);
 		
-		if (transform.position.x <= -5)
-			transform.position = new Vector3 (Random.Range(20, 40), Random.Range(respawnMin_Y, respawnMax_Y), 0);
+		if (transform.position.x <= -5) 
+		{
+			transform.position = new Vector3 (Random.Range (20, 40), Random.Range (respawnMin_Y, respawnMax_Y), 0);
+		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other) 

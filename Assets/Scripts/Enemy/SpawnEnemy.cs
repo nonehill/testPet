@@ -32,7 +32,7 @@ public class SpawnEnemy : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		spawner = GameObject.Find ("EnemySpawner");
+		spawner    = GameObject.Find ("EnemySpawner");
 		spawnPoint = GameObject.Find ("SpawnEnemyHere");
 	}
 	
