@@ -20,9 +20,16 @@ public class PlatformManager : MonoBehaviour {
 	void Update () 
 	{
 		if (move)
-			transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
+		{
+			Moving();
+		}
 
 		CheckPosition ();
+	}
+
+	void Moving ()
+	{
+		transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
 	}
 
 	void CheckPosition ()
@@ -35,10 +42,10 @@ public class PlatformManager : MonoBehaviour {
 		}
 	}
 
-	void StartMoving ()
+	public void StartMoving ()
 	{
 		Vector3 newPos = PlatformSpawnManager.instance.GetPositionForSpawn();			
-		transform.position = new Vector3 (newPos.x + Random.Range(14, 19), transform.position.y, transform.position.z);
+		transform.position = new Vector3 (newPos.x + Random.Range(GameConstants.DISTANCE_RIGHT_FOR_SPAWN, GameConstants.DISTANCE_RIGHT_FOR_SPAWN + 5), transform.position.y, transform.position.z);
 		move = true;
 	}
 }
