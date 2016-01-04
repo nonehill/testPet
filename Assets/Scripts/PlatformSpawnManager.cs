@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,7 +8,11 @@ public class PlatformSpawnManager : MonoBehaviour {
 	public List<GameObject> platformsForSpawn;
 	public static PlatformSpawnManager instance;
 
-	public Transform lastTransform;
+	private Transform _firstPlatform;
+	private Transform _lastPlatform;
+
+	public List<GameObject> _movingPlatforms;
+	public List<GameObject> _notMovingPlatforms;
 
 	// Use this for initialization
 	void Awake ()
@@ -17,46 +22,68 @@ public class PlatformSpawnManager : MonoBehaviour {
 
 	void Start ()
 	{
+		_movingPlatforms = new List<GameObject>();
+		_notMovingPlatforms = new List<GameObject>();
+		_notMovingPlatforms.AddRange(platformsForSpawn);
 		SetPlatformsOnStart ();
 	}
 
 	private void SetPlatformsOnStart ()
 	{
-		for (int i = 0; i < platformsForSpawn.Count; i++)
+		for (int i = 0; i < platformsForSpawn.Count / 2; i++)
 		{
-			Vector3 newPosition = new Vector3(GameConstants.DISTANCE_BETWEEN_PLATFORMS * i, platformsForSpawn[i].transform.position.y, platformsForSpawn[i].transform.position.z);
-			platformsForSpawn[i].transform.position = newPosition;
-			lastTransform = platformsForSpawn[i].transform;
+			ActivatePlatform(platformsForSpawn[i]);
+		}
+
+		_firstPlatform = _movingPlatforms[0].transform;
+	}
+
+	void Update ()
+	{
+		if (_firstPlatform.position.x <= GameConstants.MIN_X_FOR_REMOVE)
+		{
+			GameObject _removePlatform = _firstPlatform.gameObject;
+			_movingPlatforms.Remove(_removePlatform);
+			_notMovingPlatforms.Add(_removePlatform);
+			_firstPlatform = _movingPlatforms[0].transform;
+			GetRandomPlatform();
 		}
 	}
 
-	public Vector3 GetPositionForSpawn ()
+	private void GetRandomPlatform ()
 	{
-		Vector3 v3 = new Vector3(lastTransform.position.x, lastTransform.position.y, lastTransform.position.z);
-		return v3;
+		int randomPlatformNum = Random.Range (0, _notMovingPlatforms.Count);
+		GameObject randomPlatform = _notMovingPlatforms[randomPlatformNum];
+		ActivatePlatform (randomPlatform);
 	}
 
-	public void SpawnNewPlatformAddCurrentToSpawnList(GameObject newPlatform)
+	private void ActivatePlatform (GameObject platform)
 	{
-		SpawnRandomPlatform();
-		platformsForSpawn.Add(newPlatform);
+		Vector3 newPosition = Vector3.zero;
+
+		if (_lastPlatform == null) 
+		{
+			newPosition = platform.transform.position;
+		}
+		else
+		{
+			foreach (Transform child in _lastPlatform)
+			{
+				foreach (Transform childTransform in child)
+				{
+					if (childTransform.tag == "JumpPoint")
+					{
+						newPosition = new Vector3 ();
+					}
+				}
+			}
+		}
+
+		platform.transform.position = newPosition;
+		platform.GetComponent<Platform>().Move();
+		_movingPlatforms.Add(platform);
+		_notMovingPlatforms.Remove(platform);
+		_lastPlatform = platform.transform;		
 	}
 
-	void SpawnRandomPlatform ()
-	{
-		int randomIndex = Random.Range(0, platformsForSpawn.Count);
-		ActivatePlatform(platformsForSpawn[randomIndex]);
-		platformsForSpawn.RemoveAt(randomIndex);
-	}
-
-	void SetLastPlatfrom (GameObject platform)
-	{
-		lastTransform = GameObject.Find(platform.name + "/QuadPlatform/groundJumpPoint").transform;
-	}
-
-	void ActivatePlatform (GameObject platform)
-	{
-		SetLastPlatfrom(platform);
-		platform.SendMessage("StartMoving");
-	}
 }
