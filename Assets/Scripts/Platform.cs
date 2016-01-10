@@ -6,9 +6,6 @@ public class Platform : MonoBehaviour {
 	[SerializeField]
 	private float groundSpeed;
 
-	[SerializeField]
-	private float distanceBehindCamera;
-
 	private bool _isMoving = false;
 
 	[SerializeField]
@@ -32,8 +29,6 @@ public class Platform : MonoBehaviour {
 		{
 			Moving();
 		}
-
-		CheckPosition ();
 	}
 
 	private void Moving ()
@@ -41,24 +36,14 @@ public class Platform : MonoBehaviour {
 		transform.position -= new Vector3 (groundSpeed * Time.deltaTime, 0, 0);
 	}
 
-	private void CheckPosition ()
+	public void Stop ()
 	{
-		if (transform.position.x < distanceBehindCamera)
-		{
-			_isMoving = false;
-			transform.position = new Vector3 (100, transform.position.y, transform.position.z);
-		}
+		_isMoving = false;
+		transform.position = new Vector3 (100, transform.position.y, transform.position.z);
 	}
 
 	public void Move ()
 	{
 		_isMoving = true;
  	}
-
-//	public void StartMoving ()
-//	{
-//		Vector3 newPos = PlatformSpawnManager.instance.GetPositionForSpawn();			
-//		transform.position = new Vector3 (newPos.x + Random.Range(GameConstants.DISTANCE_RIGHT_FOR_SPAWN, GameConstants.DISTANCE_RIGHT_FOR_SPAWN + 5), transform.position.y, transform.position.z);
-//		_isMoving = true;
-//	}
 }
