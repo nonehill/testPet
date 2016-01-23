@@ -1,6 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{C4CA4238-A0B9-2382-0DCC-509A6F75849B}") = "1", "Assembly-CSharp.csproj", "{77BB0C59-6EDF-441D-78FC-8511ED0AC6CC}"
 EndProject
 Project("{C4CA4238-A0B9-2382-0DCC-509A6F75849B}") = "1", "Assembly-UnityScript-firstpass.unityproj", "{1C3C15D9-B0CE-A829-AA54-2560B00E029D}"
@@ -19,9 +18,6 @@ Global
 		{1C3C15D9-B0CE-A829-AA54-2560B00E029D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C3C15D9-B0CE-A829-AA54-2560B00E029D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3C15D9-B0CE-A829-AA54-2560B00E029D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 																																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
@@ -42,5 +38,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

@@ -75,7 +75,7 @@ public class PlatformSpawnManager : MonoBehaviour {
 
 			float _newPlatformLength = Mathf.Abs(_newPlatformLeftEdge.localPosition.x) + Mathf.Abs(_newPlatformRightEdge.localPosition.x); 
 
-			newPosition = new Vector3(_lastPaltformRightEdge.position.x + _newPlatformLength / 2 + 5, -3.41f, 0);
+			newPosition = new Vector3(_lastPaltformRightEdge.position.x + _newPlatformLength / 2 + Random.Range(7, 13), Random.Range(-4, -2.5f), 0);
 		}
 
 		platform.transform.position = newPosition;

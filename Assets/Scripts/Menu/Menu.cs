@@ -4,24 +4,12 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 
 	public AudioSource menuMusic;
-	public GameObject canvas;
-	public GameObject monstersCanvas;
-	public GameObject workshopCanvas;
-
-	public GameObject collectionView;
-
-	Animator canvasAnim;
+	public GameObject cardsWindow;
+	public GameObject dailyChallengeWindow;
 
 	// Use this for initialization
 	void Start () 
 	{
-		Invoke ("MovePlatform", 1f);
-		canvasAnim = canvas.GetComponent<Animator> ();
-	}
-
-	void MovePlatform ()
-	{
-		canvas.SetActive (true);
 	}
 
 	public void PlayPressed () 
@@ -29,26 +17,32 @@ public class Menu : MonoBehaviour {
 		Application.LoadLevel ("MainScene");
 	}
 
-	public void MonstersCollectionPressed ()
+	public void CardsPressed ()
 	{
-		canvasAnim.SetBool ("hideMenu", true);
-		monstersCanvas.SetActive (true);
-		monstersCanvas.SendMessage ("Show");
+		cardsWindow.SetActive (true);
 	}
 
-	public void WorkShopPressed ()
+	public void DailyChallengePressed ()
 	{
-		canvasAnim.SetBool ("hideMenu", true);
-		workshopCanvas.SetActive (true);
+		dailyChallengeWindow.SetActive (true);
 	}
 
 	public void BackPressed ()
 	{ 
-		monstersCanvas.SendMessage ("Hide");
-		if (workshopCanvas.activeSelf)
+		if (dailyChallengeWindow.activeSelf)
 		{
-			workshopCanvas.SetActive (false);
+			dailyChallengeWindow.SetActive (false);
 		}
-		canvasAnim.SetBool ("hideMenu", false);
 	}
+
+	public void FacebookPressed ()
+	{
+		Debug.Log ("Facebook PRESSED");
+	}
+
+	public void SettingsPressed ()
+	{
+		Debug.Log ("SettingsPressed PRESSED");
+	}
+
 }
